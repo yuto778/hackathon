@@ -1,0 +1,38 @@
+version: "3"
+services:
+
+  db:
+    # コンテナ名をmysqlに設定
+    container_name: MySQL
+    # MySQLのDockerfileをビルドする
+    build:
+      # ビルドコンテキストはカレントディレクトリ
+      context: .
+      dockerfile: Docker/MySQL/Dockerfile
+    # M1チップでも動くように
+    # Intel Macの場合あってもなくても動く
+    platform: linux/x86_64
+    # DBのボリュームを指定
+    # ローカルの/data/dbをコンテナの/var/lib/mysqlにマウントする
+    volumes:
+      - ./docker/db/data:/var/lib/mysql
+    # コンテナ内の環境変数を設定
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=chatapp
+      - MYSQL_USER=testuser
+      - MYSQL_PASSWORD=testuser
+
+  app:
+    container_name: Flask
+    build: 
+      context: .
+      dockerfile: Docker/Flask/Dockerfile
+    volumes:
+      - ./ChatApp:/code
+    ports:
+      - "5000:5000"
+    tty: true
+    
+
+    command:  bash -c "python app.py"
