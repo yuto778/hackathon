@@ -1,5 +1,5 @@
 # Pythonのイメージを指定
-FROM python:latest
+FROM python:3.11.3-buster
 # PYTHONDONTWRITEBYTECODEとPYTHONUNBUFFEREDはオプション
 # pycファイル(および__pycache__)の生成を行わないようにする
 ENV PYTHONDONTWRITEBYTECODE=1
