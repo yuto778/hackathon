@@ -9,5 +9,5 @@ requirements.txt や　MySQLのテーブル構成などは、
 
 理解不十分で進めているので、アドバイス等どんどんくださいませ！
 
-Maya 
+Maya   
 
