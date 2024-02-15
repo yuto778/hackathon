@@ -1,0 +1,112 @@
+.home-header {
+  width: auto;
+  height: 15vh;
+  display: flex;
+  align-items: center;
+}
+.home-header h1 {
+  font-size: 50px;
+  margin-left: 70px;
+  font-family: hachi maru pop;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  animation-name: apploaded;
+  animation-duration: 2s;
+  animation-timing-function: cubic-bezier(1, 1.67, 0.58, 1);
+}
+.home-header .header-nav-box {
+  display: flex;
+  font-size: 25px;
+}
+.home-header .header-nav-box .header-nav-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  margin-right: 100px;
+  animation-name: downicon;
+  animation-duration: 1.2s;
+  transform: translateY(-150px);
+  animation-fill-mode: forwards;
+}
+@keyframes downicon {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.home-header .header-nav-box .header-nav-icons:nth-child(1) {
+  animation-delay: 0s;
+}
+.home-header .header-nav-box .header-nav-icons:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.home-header .header-nav-box .header-nav-icons:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.home-header .header-nav-box .header-nav-icons:first-child {
+  margin-left: 300px;
+}
+.home-header .header-nav-box .header-nav-icons span {
+  font-size: 2.5rem;
+}
+.home-header .header-nav-box .header-nav-icons a {
+  text-decoration: none;
+  color: black;
+}
+
+.main {
+  width: auto;
+  height: 85vh;
+  display: flex;
+}
+.main ._leftside {
+  height: 100%;
+  width: 230px;
+  border: 1px solid black;
+  border-right: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  background-color: rgba(128, 128, 128, 0.21);
+}
+.main ._rightside {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+.main ._rightside ._proile {
+  background-color: rgba(128, 128, 128, 0.21);
+  border: 1px solid black;
+  border-bottom: none;
+  height: 15%;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.8s;
+}
+.main ._rightside ._proile .material-symbols-outlined {
+  font-size: 3.5rem;
+  margin-left: 150px;
+  margin-right: 150px;
+}
+.main ._rightside ._proile h2 {
+  font-size: 40px;
+  padding-top: 5px;
+}
+.main ._rightside ._proile .onephrase {
+  margin-left: 300px;
+  padding-top: 10px;
+  font-size: 25px;
+}
+.main ._rightside ._channels {
+  background-color: rgba(128, 128, 128, 0.21);
+  border: 1px solid black;
+  height: 85%;
+}
+.main ._rightside ._channels h2 {
+  margin: 5px 0 0 5px;
+}/*# sourceMappingURL=home.css.map */
